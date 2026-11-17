@@ -1,0 +1,13 @@
+student_id,subject,exam,marks,attendance,record_date
+S001,Cloud Computing,Internal 1,82,94,2026-11-01
+S002,Cloud Computing,Internal 1,76,91,2026-11-01
+S003,Cloud Computing,Internal 1,68,86,2026-11-01
+S004,Cloud Computing,Internal 1,91,97,2026-11-01
+S005,Cloud Computing,Internal 1,54,78,2026-11-01
+S006,Cloud Computing,Internal 1,88,96,2026-11-01
+S001,Python,Internal 1,89,94,2026-11-02
+S002,Python,Internal 1,73,91,2026-11-02
+S003,Python,Internal 1,62,86,2026-11-02
+S004,Python,Internal 1,93,97,2026-11-02
+S005,Python,Internal 1,58,78,2026-11-02
+S006,Python,Internal 1,84,96,2026-11-02

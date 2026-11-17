@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Performance Analytics</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div><p class="eyebrow">CLOUD-BASED ACADEMIC MONITORING</p><h1>Student Performance Dashboard</h1><p class="sub">Real-time academic insights for teachers and administrators</p></div>
+      <div id="userBadge" class="user-badge">Demo Project</div>
+    </header>
+
+    <section id="loginPanel" class="panel login-panel">
+      <div><h2>Sign in</h2><p class="muted">Use the demo teacher or admin account.</p></div>
+      <form id="loginForm" class="login-form">
+        <label>Username<input id="username" value="teacher" required></label>
+        <label>Password<input id="password" type="password" value="Teacher123" required></label>
+        <button type="submit">Login</button><p id="loginMessage" class="message"></p>
+      </form>
+      <p class="hint">Teacher: teacher / Teacher123 &nbsp; | &nbsp; Admin: admin / Admin123</p>
+    </section>
+
+    <section id="appPanel" hidden>
+      <div class="toolbar"><div><h2>Overview</h2><p class="muted">Dashboard refreshes automatically every 5 seconds.</p></div><button class="secondary" id="logoutBtn">Log out</button></div>
+      <section class="kpis">
+        <article class="kpi"><span>Total Students</span><strong id="totalStudents">0</strong></article>
+        <article class="kpi"><span>Average Marks</span><strong id="averageMarks">0%</strong></article>
+        <article class="kpi"><span>Attendance</span><strong id="attendance">0%</strong></article>
+        <article class="kpi"><span>Pass Percentage</span><strong id="passPercentage">0%</strong></article>
+      </section>
+      <section class="charts">
+        <article class="panel"><h3>Average Marks by Subject</h3><canvas id="subjectChart"></canvas></article>
+        <article class="panel"><h3>Average Marks by Class</h3><canvas id="classChart"></canvas></article>
+      </section>
+      <section class="panel">
+        <h2>Add Marks & Attendance</h2>
+        <form id="recordForm" class="record-form">
+          <label>Student<select id="studentId" required></select></label>
+          <label>Subject<input id="subject" placeholder="Cloud Computing" required></label>
+          <label>Exam<input id="exam" placeholder="Internal 2" required></label>
+          <label>Marks (0-100)<input id="marks" type="number" min="0" max="100" required></label>
+          <label>Attendance (0-100)<input id="attendanceInput" type="number" min="0" max="100" required></label>
+          <button type="submit">Save Record</button>
+        </form><p id="recordMessage" class="message"></p>
+      </section>
+      <section class="panel">
+        <div class="toolbar"><h2>Recent Records / Live Feed</h2><span class="live-dot">● Live demo</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Student</th><th>Subject</th><th>Exam</th><th>Marks</th><th>Attendance</th><th>Date</th></tr></thead><tbody id="recordsBody"></tbody></table></div>
+      </section>
+      <p class="footer-note">Student Performance Analytics · Local development version</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body></html>
